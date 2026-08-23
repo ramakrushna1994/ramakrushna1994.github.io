@@ -72,14 +72,20 @@ body.night .button.outline:hover {
   color: #17243a;
 }
 
-body.night .work { background: #17243a; }
+body.night .work { 
+  background: #17243a; 
+  color: #eff3fb;
+}
 
 body.night .experience-card.featured {
   background: linear-gradient(90deg, rgba(255,255,255,.08), transparent);
 }
 
 body.night .coco-card,
-body.night footer { background: #17243a; }
+body.night footer { 
+  background: #17243a; 
+  color: #eff3fb;
+}
 
 body.night .lab h2 em { color: #fffdf8; }
 
@@ -104,8 +110,14 @@ body.night .theme-toggle {
 body.night .theme-toggle i { color: var(--orange); }
 
 /* Night mode: stats ribbon */
-body.night .stats { background: #17243a; }
-body.night .stat { border-color: rgba(255,255,255,.08); }
+body.night .stats { 
+  background: #17243a; 
+  color: #eff3fb;
+}
+body.night .stat { 
+  border-color: rgba(255,255,255,.08); 
+  color: #eff3fb;
+}
 
 /* Night mode: back to top */
 body.night .back-to-top { background: var(--orange); }
