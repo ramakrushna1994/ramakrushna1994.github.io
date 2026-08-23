@@ -10,13 +10,29 @@ const applyTheme = (night) => {
   themeToggle.querySelector('i').textContent = night ? '☀' : '☾';
 };
 
-const storedTheme = localStorage.getItem('portfolio-theme');
-applyTheme(storedTheme ? storedTheme === 'night' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem('portfolio-theme');
+  } catch {
+    return null;
+  }
+};
+
+const storeTheme = (theme) => {
+  try {
+    localStorage.setItem('portfolio-theme', theme);
+  } catch {
+  }
+};
+
+const storedTheme = getStoredTheme();
+const prefersNight = window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+applyTheme(storedTheme ? storedTheme === 'night' : prefersNight);
 
 themeToggle.addEventListener('click', () => {
   const night = !document.body.classList.contains('night');
   applyTheme(night);
-  localStorage.setItem('portfolio-theme', night ? 'night' : 'day');
+  storeTheme(night ? 'night' : 'day');
 });
 
 menuButton.addEventListener('click', () => {
