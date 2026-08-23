@@ -43,27 +43,56 @@
         <p class="hero-intro">I'm Ramakrushna Dash. I architect the data platforms that executives trust, analysts rely on, and compliance signs off on&mdash;turning disconnected signals into decisions that move the business.</p>
         <div class="hero-actions">
           <a class="button dark" href="#case">See the value I bring <b>↓</b></a>
-          <a class="button outline" href="Ramakrushna_Dash_Resume.pdf" download="Ramakrushna_Dash_Resume.pdf">Download résumé <b>↓</b></a>
+          <a class="button outline" href="Ramakrushna_Dash_Resume.pdf" download="Ramakrushna_Dash_Resume.pdf">Download Resume <b>↓</b></a>
         </div>
       </div>
-      <div class="hero-art" aria-label="Diagram showing Kafka streams, API callbacks, and SQL Server data flowing through a medallion architecture with PII protection to Snowflake and BI teams">
-        <canvas class="hero-canvas" aria-hidden="true"></canvas>
-        <div class="art-label label-one">RAW SIGNALS</div>
-        <div class="art-label label-two">GOVERNED CORE</div>
-        <div class="art-label label-three">DECISIONS</div>
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="route route-one"></div>
-        <div class="route route-two"></div>
-        <div class="route route-three"></div>
-        <div class="route route-four"></div>
-        <div class="source source-one"><i>01</i><strong>Kafka</strong><small>streams</small></div>
-        <div class="source source-two"><i>02</i><strong>API</strong><small>callbacks</small></div>
-        <div class="source source-three"><i>03</i><strong>SQL</strong><small>legacy</small></div>
-        <div class="core"><span>TRUST<br>ENGINE</span><i></i><b>PII<br>SAFE</b></div>
-        <div class="medallion"><span>Bronze</span><span>Silver</span><span>Gold</span></div>
-        <div class="destination"><span>Trusted data</span><strong>made useful.</strong><small>Snowflake / BI / teams</small></div>
-        <div class="art-foot"><span>STREAMING + LAKEHOUSE</span><b>ALWAYS ON</b></div>
+      <div class="hero-art" aria-label="Dashboard showing real-time telemetry of data pipelines">
+        <div class="art-dashboard">
+          <div class="telemetry-top">
+            <span>PIPELINE HEALTH</span>
+            <b><i></i>LIVE</b>
+          </div>
+          <div class="telemetry-grid">
+            <div class="telemetry-main">
+              <small>Ingestion Rate</small>
+              <strong>14.2<em>k/s</em></strong>
+              <div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="chart-axis"><span>1H AGO</span><span>NOW</span></div>
+            </div>
+            <div class="telemetry-side">
+              <small>Latency</small>
+              <strong>42<em>ms</em></strong>
+              <small>Data Quality</small>
+              <div class="health-bar"><i></i></div>
+              <small>PII Protection</small>
+              <strong>100<em>%</em></strong>
+            </div>
+          </div>
+          <div class="telemetry-stream">
+            <span><b>sys_log:</b> tokenizing payload...</span>
+            <time>0.02ms</time>
+          </div>
+          <div class="telemetry-stream">
+            <span><b>sys_log:</b> batch written to bronze</span>
+            <time>0.08ms</time>
+          </div>
+          <div class="telemetry-footer">
+            <span>All systems operational</span>
+            <span>ID: RD-773</span>
+          </div>
+        </div>
+        
+        <div class="art-coco">
+          <div class="query-header"><span>SNOWFLAKE / CORTEX</span><b>CONNECTED</b></div>
+          <div class="result-row">
+            <div>
+              <span>REVENUE YTD</span><br>
+              <strong>$4.2M</strong>
+            </div>
+            <b>+12%</b>
+          </div>
+          <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
       </div>
       <div class="hero-stamp" aria-label="Scroll down"><span>Scroll</span><i>↓</i></div>
     </section>
