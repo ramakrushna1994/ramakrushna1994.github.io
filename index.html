@@ -54,14 +54,14 @@
           </div>
           <div class="telemetry-grid">
             <div class="telemetry-main">
-              <small>Ingestion Rate</small>
-              <strong>14.2<em>k/s</em></strong>
+              <small>Files Processed</small>
+              <strong>8,000+<em>/day</em></strong>
               <div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <div class="chart-axis"><span>1H AGO</span><span>NOW</span></div>
             </div>
             <div class="telemetry-side">
-              <small>Latency</small>
-              <strong>42<em>ms</em></strong>
+              <small>Pipelines Live</small>
+              <strong>3<em> prod</em></strong>
               <small>Data Quality</small>
               <div class="health-bar"><i></i></div>
               <small>PII Protection</small>
@@ -83,13 +83,13 @@
         </div>
         
         <div class="art-coco">
-          <div class="query-header"><span>SNOWFLAKE / CORTEX</span><b>CONNECTED</b></div>
+          <div class="query-header"><span>COCO QUEST · DEMO</span><b>CONNECTED</b></div>
           <div class="result-row">
             <div>
-              <span>REVENUE YTD</span><br>
-              <strong>$4.2M</strong>
+              <span>POLICIES / Q4</span><br>
+              <strong>10,000+</strong>
             </div>
-            <b>+12%</b>
+            <b>+18%</b>
           </div>
           <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </div>
@@ -115,7 +115,7 @@
         <div class="stat">
           <span class="stat-number" data-target="50" data-suffix="+">0</span>
           <span class="stat-label">Legacy workflows migrated</span>
-          <span class="stat-sub">Zero-downtime cutover</span>
+          <span class="stat-sub">15-day parallel validation, zero delta</span>
         </div>
         <div class="stat">
           <span class="stat-number" data-target="100" data-suffix="%">0</span>
@@ -235,12 +235,12 @@
             <h3>Senior Data Engineer</h3>
             <p class="outcome">Building a modern streaming platform where real-time event data becomes a secure, governed asset that drives underwriting decisions across the enterprise.</p>
             <ul>
-              <li>Architected 3 production-grade Kafka → Databricks → Snowflake streaming pipelines using medallion architecture on ADLS Gen2.</li>
-              <li>Engineered ChubbIO integration: Kafka JSON events into Databricks bronze layer via PySpark and Delta Lake.</li>
-              <li>Built asynchronous DuckCreek callback flow: receives JSON payload, triggers API for XML policy documents, parses and loads structured data to Snowflake.</li>
-              <li>Delivered SQL Server → Snowflake migration with embedded XML parsing across multiple columns before bronze ingestion.</li>
-              <li>Implemented enterprise-standard PII tokenization and field-level encryption across all sensitive pipelines.</li>
-              <li>Managed CI/CD deployment and environment promotion using Databricks Asset Bundles (DAB).</li>
+              <li>Designed a shared hybrid ingestion architecture: on-prem Linux server bridges on-prem Kafka and source systems to ADLS Gen2, enabling secure cloud-side Databricks processing — applied consistently across all 3 production pipelines.</li>
+              <li>Engineered ChubbIO pipeline — ingests Thailand Auto Rating claim events (vehicle &amp; claim JSON payloads) from on-prem Kafka via Linux bridge to ADLS Gen2; processes 2,000 files per 6-hour batch through full medallion architecture (bronze → silver → gold) into Snowflake for UW squad reporting; reconciles files received vs files processed for every batch run.</li>
+              <li>Built DuckCreek policy pipeline — hourly Kafka batch captures policy-sold events containing ASYNC IDs; calls secured DuckCreek API per ID to retrieve full XML policy documents; encrypts on-prem via AES-256 (Azure Key Vault-managed) before ADLS transit; decrypts and processes entirely in Databricks memory with zero PII written to persistent storage; tokenizes PII via Chubb native API backed by an isolated on-prem tokenization server; loads structured data to Snowflake. Dual reconciliation: files received vs processed + ASYNC IDs vs XML documents returned. 10,000+ policies warehoused to date.</li>
+              <li>Delivered SQL Server → Snowflake migration via Databricks — 5M+ rows, 25GB of history data including embedded XML columns requiring custom parsing; AES-256 tokenization applied to all PII fields before load.</li>
+              <li>Implemented Chubb-standard AES-256 encryption (Azure Key Vault) and field-level PII tokenization with architectural isolation — Databricks has zero access to the on-prem tokenization server by design, eliminating cloud-side PII exposure.</li>
+              <li>Managed CI/CD deployment and environment promotion across all pipelines using Databricks Asset Bundles (DAB).</li>
             </ul>
             <div class="chips"><span>PySpark</span><span>Kafka</span><span>Databricks</span><span>Snowflake</span><span>Delta Lake</span><span>ADLS Gen2</span><span>CI/CD</span></div>
           </div>
@@ -288,7 +288,7 @@
       <div class="engagement-grid reveal-group">
         <article class="engagement-card">
           <div class="engagement-top"><span>01</span><b>INSURANCE / BATCH PROCESSING</b></div>
-          <div class="impact-metric"><i class="icon">⚡</i> 1M+ Records Batched</div>
+          <div class="impact-metric"><i class="icon">⚡</i> 5M+ Records Migrated</div>
           <h3>A scalable platform<br>built for trust.</h3>
           <p class="challenge"><strong>The challenge</strong>Bring JSON events, asynchronous XML policy documents, and legacy SQL Server data into one dependable delivery path&mdash;with enterprise-grade PII protection at every layer.</p>
           <p class="result"><strong>The delivery</strong>Designed Databricks medallion pipelines that move data from Kafka and callback APIs to governed Snowflake tables, with tokenization and field-level encryption built into the architecture from day one.</p>
@@ -304,7 +304,7 @@
         </article>
         <article class="engagement-card">
           <div class="engagement-top"><span>03</span><b>ENTERPRISE / DATA FOUNDATION</b></div>
-          <div class="impact-metric"><i class="icon">⏱️</i> 30% Faster ETL</div>
+          <div class="impact-metric"><i class="icon">⏱️</i> 6-Year ETL Foundation</div>
           <h3>Foundations that<br>outlast <em>the project.</em></h3>
           <p class="challenge"><strong>The challenge</strong>Keep high-volume ETL and reporting dependable while moving an established data estate toward cloud services across multi-year timelines.</p>
           <p class="result"><strong>The delivery</strong>Delivered warehousing solutions and a PowerCenter-to-IICS modernization path that gave reporting teams a more durable, scalable base through advanced indexing, query optimization, and structural improvements.</p>
