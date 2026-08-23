@@ -1,18 +1,97 @@
 /* Public-safe employer engagement case studies. */
-.engagements{background:var(--paper)}
-.engagement-heading{display:grid;grid-template-columns:1fr .46fr;gap:8vw;align-items:end;margin-bottom:55px}
-.engagement-heading p{color:var(--muted);margin:0;font-size:14px}
-.engagement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.engagement-card{background:var(--cream);padding:25px;min-height:425px;border-top:3px solid var(--ink);display:flex;flex-direction:column}
-.engagement-card:nth-child(2){border-color:var(--orange)}
-.engagement-card:nth-child(3){border-color:var(--yellow)}
-.engagement-top{display:flex;justify-content:space-between;gap:10px;font:9px var(--mono);letter-spacing:.07em;color:var(--muted)}
-.engagement-top span{color:var(--orange)}
-.engagement-card h3{font:600 28px/1 var(--serif);letter-spacing:-.05em;margin:43px 0 20px}
-.engagement-card h3 em{font-style:italic;color:var(--orange)}
-.engagement-card p{font-size:12px;color:var(--muted);margin:0 0 14px}
-.engagement-card p strong{display:block;color:var(--ink);font:9px var(--mono);letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}
-.engagement-card .result{color:var(--ink)}
-.engagement-card .chips{margin-top:auto}
-.engagement-card .chips span{color:var(--ink);border-color:var(--line)}
-@media(max-width:760px){.engagement-heading{display:block}.engagement-heading p{margin-top:25px}.engagement-grid{grid-template-columns:1fr}.engagement-card{min-height:0}}
+.engagements { background: var(--paper); }
+
+.engagement-heading {
+  display: grid;
+  grid-template-columns: 1fr .46fr;
+  gap: 8vw;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.engagement-heading p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.engagement-card {
+  background: var(--cream);
+  padding: 25px;
+  min-height: 425px;
+  border-top: 3px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s var(--ease-out-expo), box-shadow .35s;
+}
+
+.engagement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(23,38,62,.1);
+}
+
+.engagement-card:nth-child(2) { border-color: var(--orange); }
+.engagement-card:nth-child(3) { border-color: var(--yellow); }
+
+.engagement-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font: 9px var(--mono);
+  letter-spacing: .07em;
+  color: var(--muted);
+}
+
+.engagement-top span { color: var(--orange); }
+
+.engagement-card h3 {
+  font: 600 28px/1 var(--serif);
+  letter-spacing: -.05em;
+  margin: 43px 0 20px;
+}
+
+.engagement-card h3 em {
+  font-style: italic;
+  color: var(--orange);
+}
+
+.engagement-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.engagement-card p strong {
+  display: block;
+  color: var(--ink);
+  font: 9px var(--mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.engagement-card .result { color: var(--ink); }
+.engagement-card .chips { margin-top: auto; }
+
+.engagement-card .chips span {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.engagement-card .chips span:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+@media (max-width: 760px) {
+  .engagement-heading { display: block; }
+  .engagement-heading p { margin-top: 25px; }
+  .engagement-grid { grid-template-columns: 1fr; }
+  .engagement-card { min-height: 0; }
+}

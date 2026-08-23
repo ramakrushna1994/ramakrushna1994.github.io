@@ -3,84 +3,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ramakrushna Dash is a Senior Data Engineer who builds trusted cloud data platforms.">
+  <meta name="description" content="Ramakrushna Dash — Senior Data Engineer with ~10 years building enterprise-grade streaming platforms, lakehouse architectures, and PII-compliant data systems on Databricks, Snowflake & AWS.">
+  <meta name="keywords" content="Data Engineer, Databricks, Snowflake, Kafka, PySpark, AWS Glue, Lakehouse, Streaming, PII Tokenization, ETL, Cloud Data Platform">
+  <meta name="author" content="Ramakrushna Dash">
+  <meta property="og:title" content="Ramakrushna Dash — Senior Data Engineer">
+  <meta property="og:description" content="I architect the data platforms that executives trust, analysts rely on, and compliance signs off on.">
+  <meta property="og:type" content="website">
   <title>Ramakrushna Dash — Data systems people can trust</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="engagements.css">
+  <link rel="stylesheet" href="visuals.css">
   <link rel="stylesheet" href="theme.css">
 </head>
 <body>
   <header class="header" id="top">
     <a class="brand" href="#top" aria-label="Ramakrushna Dash home"><span class="brand-mark">R</span><span>Ramakrushna Dash<small>Senior Data Engineer</small></span></a>
     <button class="menu-button" aria-controls="nav" aria-expanded="false" type="button"><i></i><i></i><span>Menu</span></button>
-    <nav id="nav" aria-label="Main navigation"><a href="#case">Why me</a><a href="#work">Experience</a><a href="#engagements">Engagements</a><a href="#lab">Project</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i>☾</i><span>Night</span></button><a class="nav-button" href="#contact">Start a conversation <b>↗</b></a></nav>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#case">Why me</a>
+      <a href="#work">Experience</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#lab">Project</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i>☾</i><span>Night</span></button>
+      <a class="nav-button" href="#contact">Start a conversation <b>↗</b></a>
+    </nav>
   </header>
 
   <main>
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> Building trusted data products since 2016</p>
-        <h1>Data that earns<br><em>its place</em> in the room.</h1>
-        <p class="hero-intro">I’m Ramakrushna Dash. I turn disconnected, business-critical data into resilient platforms that are ready for decisions&mdash;not just dashboards.</p>
-        <div class="hero-actions"><a class="button dark" href="#case">See the value I bring <b>↓</b></a><a class="underlink" href="Ramakrushna_Dash_Resume.pdf" download="Ramakrushna_Dash_Resume.pdf">Download résumé <b>↓</b></a></div>
+        <h1>Data that earns<br><em>its place</em> in the<br>room.</h1>
+        <p class="hero-intro">I'm Ramakrushna Dash. I architect the data platforms that executives trust, analysts rely on, and compliance signs off on&mdash;turning disconnected signals into decisions that move the business.</p>
+        <div class="hero-actions">
+          <a class="button dark" href="#case">See the value I bring <b>↓</b></a>
+          <a class="underlink" href="Ramakrushna_Dash_Resume.pdf" download="Ramakrushna_Dash_Resume.pdf">Download résumé <b>↓</b></a>
+        </div>
       </div>
-      <div class="hero-art" aria-label="Diagram showing data signals travelling through a reliable data platform">
-        <div class="art-label label-one">RAW SIGNALS</div><div class="art-label label-two">GOVERNED CORE</div><div class="art-label label-three">DECISIONS</div>
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="route route-one"></div><div class="route route-two"></div><div class="route route-three"></div>
-        <div class="source source-one"><i>01</i><strong>JSON</strong><small>events</small></div><div class="source source-two"><i>02</i><strong>XML</strong><small>policy</small></div>
-        <div class="core"><span>TRUST<br>ENGINE</span><i></i><b>PII<br>SAFE</b></div><div class="destination"><span>Trusted data</span><strong>made useful.</strong><small>Snowflake / BI / teams</small></div>
+      <div class="hero-art" aria-label="Diagram showing Kafka streams, API callbacks, and SQL Server data flowing through a medallion architecture with PII protection to Snowflake and BI teams">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="art-label label-one">RAW SIGNALS</div>
+        <div class="art-label label-two">GOVERNED CORE</div>
+        <div class="art-label label-three">DECISIONS</div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="route route-one"></div>
+        <div class="route route-two"></div>
+        <div class="route route-three"></div>
+        <div class="route route-four"></div>
+        <div class="source source-one"><i>01</i><strong>Kafka</strong><small>streams</small></div>
+        <div class="source source-two"><i>02</i><strong>API</strong><small>callbacks</small></div>
+        <div class="source source-three"><i>03</i><strong>SQL</strong><small>legacy</small></div>
+        <div class="core"><span>TRUST<br>ENGINE</span><i></i><b>PII<br>SAFE</b></div>
+        <div class="medallion"><span>Bronze</span><span>Silver</span><span>Gold</span></div>
+        <div class="destination"><span>Trusted data</span><strong>made useful.</strong><small>Snowflake / BI / teams</small></div>
         <div class="art-foot"><span>STREAMING + LAKEHOUSE</span><b>ALWAYS ON</b></div>
       </div>
-      <div class="hero-stamp"><span>Scroll</span><i>↓</i></div>
+      <div class="hero-stamp" aria-label="Scroll down"><span>Scroll</span><i>↓</i></div>
     </section>
 
+    <!-- ============================================================
+         STATS RIBBON
+         ============================================================ -->
+    <section class="stats" aria-label="Key statistics">
+      <div class="stats-grid reveal-group">
+        <div class="stat">
+          <span class="stat-number" data-target="10" data-suffix="+">0</span>
+          <span class="stat-label">Years in enterprise data</span>
+          <span class="stat-sub">Insurance &amp; Financial Services</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="3" data-suffix="">0</span>
+          <span class="stat-label">Production streaming pipelines</span>
+          <span class="stat-sub">Real-time Kafka → Snowflake</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="50" data-suffix="+">0</span>
+          <span class="stat-label">Legacy workflows migrated</span>
+          <span class="stat-sub">Zero-downtime cutover</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="100" data-suffix="%">0</span>
+          <span class="stat-label">PII compliance coverage</span>
+          <span class="stat-sub">Enterprise-grade security</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 / THE BUSINESS CASE
+         ============================================================ -->
     <section class="case section" id="case">
-      <p class="section-no">01 / THE BUSINESS CASE</p>
-      <div class="case-title"><h2>You don’t need<br>more data.</h2><p>You need data that arrives on time, carries the right context, protects what matters, and gives the business confidence to move.</p></div>
-      <div class="case-line"></div>
+      <p class="section-no reveal">01 / THE BUSINESS CASE</p>
+      <div class="case-title reveal">
+        <h2>You don't need<br>more data.</h2>
+        <p>You need data that arrives on time, carries the right context, protects what matters, and gives the business confidence to move.</p>
+      </div>
+      <div class="case-line reveal"></div>
       <div class="proof-grid reveal-group">
-        <article><span>01</span><h3>From data volume<br>to <em>signal.</em></h3><p>Three production streaming pipelines take real-time Kafka events from raw input to governed, analysis-ready Snowflake data.</p><b>Kafka · Databricks · Delta Lake</b></article>
-        <article><span>02</span><h3>From legacy<br>to <em>leverage.</em></h3><p>50+ Informatica PowerCenter workflows were moved toward cloud-native AWS Glue, with dual-run reconciliation to protect the cutover.</p><b>AWS Glue · Informatica · SQL Server</b></article>
-        <article><span>03</span><h3>From exposure<br>to <em>assurance.</em></h3><p>PII tokenization and field-level encryption are engineered into sensitive pipelines, not added after the fact.</p><b>Security · Compliance · Trust</b></article>
+        <article>
+          <span>01</span>
+          <h3>From data volume<br>to <em>signal.</em></h3>
+          <p>Three production streaming pipelines take real-time Kafka events from raw input to governed, analysis-ready Snowflake data&mdash;processing JSON events, XML policy documents, and legacy SQL Server extracts through a medallion architecture.</p>
+          <b>Kafka · Databricks · Delta Lake · Snowflake</b>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>From legacy<br>to <em>leverage.</em></h3>
+          <p>50+ Informatica PowerCenter workflows migrated to cloud-native AWS Glue with dual-run reconciliation. Not a single record lost. Not a single business day disrupted. That's how you earn trust.</p>
+          <b>AWS Glue · Informatica · Parallel Validation</b>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>From exposure<br>to <em>assurance.</em></h3>
+          <p>PII tokenization and field-level encryption are engineered into every sensitive pipeline from day one. Compliance isn't a checkbox&mdash;it's a design principle that runs through every layer I build.</p>
+          <b>PII Tokenization · Encryption · Governance</b>
+        </article>
       </div>
     </section>
 
+    <!-- ============================================================
+         02 / HOW I WORK
+         ============================================================ -->
     <section class="manifesto section">
-      <p class="section-no">02 / HOW I WORK</p><div class="manifesto-grid"><h2>Good data<br>engineering is<br><em>invisible.</em></h2><div><p class="lead">The best platform is the one the business never has to worry about.</p><p>I design for the real world: formats that refuse to behave, APIs that return later than expected, migrations that cannot drop a record, and teams that need to know what is happening without reading a log file.</p><a class="underlink" href="#work">Explore the track record <b>↓</b></a></div></div>
-      <div class="principles"><div><b>01</b><span>Make complexity legible</span><p>Clear layers, clear lineage, clear owners.</p></div><div><b>02</b><span>Design for the cutover</span><p>Validate the old and new worlds in parallel.</p></div><div><b>03</b><span>Secure the useful thing</span><p>Protect sensitive data without slowing decisions.</p></div></div>
+      <p class="section-no reveal">02 / HOW I WORK</p>
+      <div class="manifesto-grid reveal">
+        <h2>Good data<br>engineering is<br><em>invisible.</em></h2>
+        <div>
+          <p class="lead">The best platform is the one the business never has to worry about.</p>
+          <p>I design for the real world: formats that refuse to behave, APIs that return later than expected, migrations that cannot drop a record, and teams that need to know what is happening without reading a log file. Every pipeline I build is designed to handle the chaos silently and deliver clarity loudly.</p>
+          <a class="underlink" href="#work">Explore the track record <b>↓</b></a>
+        </div>
+      </div>
+      <div class="principles reveal-group">
+        <div><b>01</b><span>Make complexity legible</span><p>Clear layers, clear lineage, clear owners. Medallion architecture that speaks for itself.</p></div>
+        <div><b>02</b><span>Design for the cutover</span><p>Validate the old and new worlds in parallel. Earn trust before asking for it.</p></div>
+        <div><b>03</b><span>Secure the useful thing</span><p>Protect sensitive data without slowing decisions. Security that enables, not blocks.</p></div>
+      </div>
     </section>
 
+    <!-- ============================================================
+         03 / EXPERIENCE
+         ============================================================ -->
     <section class="work section" id="work">
-      <div class="work-heading"><p class="section-no">03 / PROOF IN PRACTICE</p><h2>The work behind<br>the <em>promise.</em></h2></div>
+      <div class="work-heading reveal">
+        <p class="section-no">03 / PROOF IN PRACTICE</p>
+        <h2>The work behind<br>the <em>promise.</em></h2>
+      </div>
       <div class="experience reveal-group">
-        <article class="experience-card featured"><div class="experience-meta"><span>NOW</span><time>Nov 2024 — Present</time></div><div><p class="company">Chubb <span>Insurance</span></p><h3>Senior Data Engineer</h3><p class="outcome">Building a modern streaming platform where real-time event data becomes a secure, governed asset for the business.</p><ul><li>Delivered Kafka → Databricks → Snowflake streaming pipelines using a medallion architecture.</li><li>Built an asynchronous DuckCreek callback flow that turns JSON requests and XML policy documents into structured data.</li><li>Managed deployment and environment promotion with Databricks Asset Bundles.</li></ul><div class="chips"><span>PySpark</span><span>Kafka</span><span>Snowflake</span><span>CI/CD</span></div></div></article>
-        <article class="experience-card"><div class="experience-meta"><span>2022—24</span><time>Dec 2022 — Oct 2024</time></div><div><p class="company">LTIMindtree <span>Insurance client</span></p><h3>Specialist Data Engineer</h3><p class="outcome">Modernized a high-traffic insurance data estate without asking the business to take a leap of faith.</p><ul><li>Led an end-to-end migration of 50+ PowerCenter workflows to AWS Glue.</li><li>Created parallel-load validation to demonstrate record-level parity before production cutover.</li></ul><div class="chips"><span>AWS Glue</span><span>Informatica</span><span>Reconciliation</span></div></div></article>
-        <article class="experience-card"><div class="experience-meta"><span>2016—22</span><time>Mar 2016 — Jun 2022</time></div><div><p class="company">Tata Consultancy Services</p><h3>IT Analyst</h3><p class="outcome">Established the enterprise data foundations that reporting teams can rely on year after year.</p><ul><li>Delivered large-scale warehousing and reporting solutions with Informatica, Snowflake, and SAP BOXI.</li><li>Led a PowerCenter-to-IICS modernization journey for high-volume ETL workloads.</li></ul><div class="chips"><span>IICS</span><span>Oracle</span><span>Snowflake</span></div></div></article>
+        <article class="experience-card featured">
+          <div class="experience-meta"><span>NOW</span><time>Nov 2024 — Present</time></div>
+          <div>
+            <p class="company">Chubb <span>Insurance</span></p>
+            <h3>Senior Data Engineer</h3>
+            <p class="outcome">Building a modern streaming platform where real-time event data becomes a secure, governed asset that drives underwriting decisions across the enterprise.</p>
+            <ul>
+              <li>Architected 3 production-grade Kafka → Databricks → Snowflake streaming pipelines using medallion architecture on ADLS Gen2.</li>
+              <li>Engineered ChubbIO integration: Kafka JSON events into Databricks bronze layer via PySpark and Delta Lake.</li>
+              <li>Built asynchronous DuckCreek callback flow: receives JSON payload, triggers API for XML policy documents, parses and loads structured data to Snowflake.</li>
+              <li>Delivered SQL Server → Snowflake migration with embedded XML parsing across multiple columns before bronze ingestion.</li>
+              <li>Implemented enterprise-standard PII tokenization and field-level encryption across all sensitive pipelines.</li>
+              <li>Managed CI/CD deployment and environment promotion using Databricks Asset Bundles (DAB).</li>
+            </ul>
+            <div class="chips"><span>PySpark</span><span>Kafka</span><span>Databricks</span><span>Snowflake</span><span>Delta Lake</span><span>ADLS Gen2</span><span>CI/CD</span></div>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-meta"><span>2022—24</span><time>Dec 2022 — Oct 2024</time></div>
+          <div>
+            <p class="company">LTIMindtree <span>Insurance client</span></p>
+            <h3>Specialist Data Engineer</h3>
+            <p class="outcome">Modernized a high-traffic insurance data estate without asking the business to take a leap of faith&mdash;proving every record before cutting over.</p>
+            <ul>
+              <li>Led end-to-end migration of 50+ Informatica PowerCenter workflows to AWS Glue, modernizing legacy ETL to cloud-native.</li>
+              <li>Built parallel-load reconciliation&mdash;running dual pipelines to validate record-level parity before production cutover.</li>
+              <li>Conducted the foundational PoC that established migration feasibility, architecture, and risk assessment.</li>
+            </ul>
+            <div class="chips"><span>AWS Glue</span><span>Informatica</span><span>SQL Server</span><span>Reconciliation</span></div>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-meta"><span>2016—22</span><time>Mar 2016 — Jun 2022</time></div>
+          <div>
+            <p class="company">Tata Consultancy Services</p>
+            <h3>IT Analyst</h3>
+            <p class="outcome">Established the enterprise data foundations that reporting teams relied on year after year&mdash;the kind of work that becomes invisible because it never breaks.</p>
+            <ul>
+              <li>Delivered large-scale warehousing and reporting solutions with Informatica PowerCenter, Snowflake, and SAP BOXI across multi-year engagements.</li>
+              <li>Led the PowerCenter-to-IICS modernization journey, driving legacy ETL infrastructure into the cloud era.</li>
+              <li>Developed and maintained ETL workflows processing high-volume structured data for enterprise reporting.</li>
+            </ul>
+            <div class="chips"><span>IICS</span><span>Snowflake</span><span>Oracle</span><span>SAP BOXI</span><span>Unix Shell</span></div>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- ============================================================
+         04 / ENGAGEMENTS
+         ============================================================ -->
     <section class="engagements section" id="engagements">
-      <p class="section-no">04 / SELECTED ENGAGEMENTS</p>
-      <div class="engagement-heading"><h2>Enterprise work,<br>told through <em>outcomes.</em></h2><p>These are public-safe summaries of delivery work. They focus on the business challenge, the engineering approach, and the result&mdash;never client data or proprietary code.</p></div>
+      <p class="section-no reveal">04 / SELECTED ENGAGEMENTS</p>
+      <div class="engagement-heading reveal">
+        <h2>Enterprise work,<br>told through <em>outcomes.</em></h2>
+        <p>These are public-safe summaries of delivery work. They focus on the business challenge, the engineering approach, and the result&mdash;never client data or proprietary code.</p>
+      </div>
       <div class="engagement-grid reveal-group">
-        <article class="engagement-card"><div class="engagement-top"><span>01</span><b>INSURANCE / STREAMING</b></div><h3>A real-time platform<br>built for trust.</h3><p class="challenge"><strong>The challenge</strong>Bring JSON events, asynchronous XML policy documents, and legacy SQL Server data into one dependable delivery path.</p><p class="result"><strong>The delivery</strong>Designed Databricks medallion pipelines that move data from Kafka and APIs to governed Snowflake tables, with PII protection built in.</p><div class="chips"><span>Kafka</span><span>Databricks</span><span>Snowflake</span></div></article>
-        <article class="engagement-card"><div class="engagement-top"><span>02</span><b>INSURANCE / MODERNIZATION</b></div><h3>A migration plan<br>with a <em>safety net.</em></h3><p class="challenge"><strong>The challenge</strong>Modernize more than 50 legacy Informatica PowerCenter workflows without compromising business continuity.</p><p class="result"><strong>The delivery</strong>Led AWS Glue migration work and built parallel reconciliation pipelines to prove record-level parity before cutover.</p><div class="chips"><span>AWS Glue</span><span>Informatica</span><span>Validation</span></div></article>
-        <article class="engagement-card"><div class="engagement-top"><span>03</span><b>ENTERPRISE / DATA FOUNDATION</b></div><h3>Foundations that<br>outlast <em>the project.</em></h3><p class="challenge"><strong>The challenge</strong>Keep high-volume ETL and reporting dependable while moving an established data estate toward cloud services.</p><p class="result"><strong>The delivery</strong>Delivered warehousing solutions and a PowerCenter-to-IICS modernization path that gave reporting teams a more durable base.</p><div class="chips"><span>IICS</span><span>Snowflake</span><span>Oracle</span></div></article>
+        <article class="engagement-card">
+          <div class="engagement-top"><span>01</span><b>INSURANCE / STREAMING</b></div>
+          <h3>A real-time platform<br>built for trust.</h3>
+          <p class="challenge"><strong>The challenge</strong>Bring JSON events, asynchronous XML policy documents, and legacy SQL Server data into one dependable delivery path&mdash;with enterprise-grade PII protection at every layer.</p>
+          <p class="result"><strong>The delivery</strong>Designed Databricks medallion pipelines that move data from Kafka and callback APIs to governed Snowflake tables, with tokenization and field-level encryption built into the architecture from day one.</p>
+          <div class="chips"><span>Kafka</span><span>Databricks</span><span>Snowflake</span><span>PII Security</span></div>
+        </article>
+        <article class="engagement-card">
+          <div class="engagement-top"><span>02</span><b>INSURANCE / MODERNIZATION</b></div>
+          <h3>A migration plan<br>with a <em>safety net.</em></h3>
+          <p class="challenge"><strong>The challenge</strong>Modernize more than 50 legacy Informatica PowerCenter workflows without compromising business continuity or losing a single record.</p>
+          <p class="result"><strong>The delivery</strong>Led AWS Glue migration with parallel reconciliation pipelines that proved record-level parity before cutover. The business never felt the switch.</p>
+          <div class="chips"><span>AWS Glue</span><span>Informatica</span><span>Validation</span></div>
+        </article>
+        <article class="engagement-card">
+          <div class="engagement-top"><span>03</span><b>ENTERPRISE / DATA FOUNDATION</b></div>
+          <h3>Foundations that<br>outlast <em>the project.</em></h3>
+          <p class="challenge"><strong>The challenge</strong>Keep high-volume ETL and reporting dependable while moving an established data estate toward cloud services across multi-year timelines.</p>
+          <p class="result"><strong>The delivery</strong>Delivered warehousing solutions and a PowerCenter-to-IICS modernization path that gave reporting teams a more durable, scalable base they could build on for years.</p>
+          <div class="chips"><span>IICS</span><span>Snowflake</span><span>Oracle</span></div>
+        </article>
       </div>
     </section>
 
+    <!-- ============================================================
+         05 / THE LAB
+         ============================================================ -->
     <section class="lab section" id="lab">
-      <p class="section-no">05 / THE LAB</p><div class="lab-layout"><div><p class="eyebrow">Featured build / 2026</p><h2>Meet Coco<br><em>Quest.</em></h2><p>A Snowflake-native conversational BI assistant for the moment a business leader has a question, but not the SQL to answer it.</p><a class="button light" href="https://github.com/ramakrushna1994/Snowflake-BI-Assistant" target="_blank" rel="noopener">See the project <b>↗</b></a></div><div class="coco-card"><div class="coco-top"><span>COCO QUEST</span><b>● LIVE</b></div><div class="question">“Which region drove our quarterly growth?”</div><div class="answer"><span>REVENUE / Q4</span><strong>+18.4%</strong><p>West region outperformed the prior quarter.</p><div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="guardrail"><b>◈</b> Guardrails on: semantic routing, injection defence, row limits.</div></div></div>
+      <p class="section-no reveal">05 / THE LAB</p>
+      <div class="lab-layout reveal">
+        <div>
+          <p class="eyebrow">Featured build / 2026</p>
+          <h2>Meet Coco<br><em>Quest.</em></h2>
+          <p>A Snowflake-native conversational BI assistant built for the moment a business leader has a question but not the SQL to answer it. Ask in plain English, get governed, accurate answers instantly.</p>
+          <a class="button light" href="https://github.com/ramakrushna1994/Snowflake-BI-Assistant" target="_blank" rel="noopener">See the project <b>↗</b></a>
+        </div>
+        <div class="coco-card">
+          <div class="coco-top"><span>COCO QUEST</span><b>● LIVE</b></div>
+          <div class="question">"Which region drove our quarterly growth?"</div>
+          <div class="answer">
+            <span>REVENUE / Q4</span>
+            <strong>+18.4%</strong>
+            <p>West region outperformed the prior quarter.</p>
+            <div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="guardrail"><b>◈</b> Guardrails on: Cortex-powered semantic routing, injection defence, row limits, schema isolation.</div>
+        </div>
+      </div>
     </section>
 
-    <section class="credentials section"><p class="section-no">06 / THE FOUNDATION</p><div class="credentials-grid"><h2>Expertise with<br><em>range.</em></h2><div class="credential-list"><div><span>PLATFORMS</span><p>Databricks · Snowflake · AWS Glue · ADLS Gen2 · Informatica Cloud</p></div><div><span>LANGUAGES</span><p>PySpark · Python · SQL</p></div><div><span>SPECIALTIES</span><p>Kafka streaming · Lakehouse architecture · API integration · XML &amp; JSON processing · PII security</p></div><div><span>CREDENTIALS</span><p>Microsoft Azure Fundamentals (AZ-900) · DP-750 Azure Databricks Solution Expert <small>in progress</small></p></div><div><span>EDUCATION</span><p>B.Tech / B.E., Biju Patnaik University of Technology</p></div></div></div></section>
+    <!-- ============================================================
+         06 / CREDENTIALS
+         ============================================================ -->
+    <section class="credentials section">
+      <p class="section-no reveal">06 / THE FOUNDATION</p>
+      <div class="credentials-grid reveal">
+        <h2>Expertise with<br><em>range.</em></h2>
+        <div class="credential-list">
+          <div><span>PLATFORMS</span><p>Databricks · Snowflake · AWS Glue · ADLS Gen2 · Informatica Cloud (IICS) · Informatica PowerCenter</p></div>
+          <div><span>LANGUAGES</span><p>PySpark · Python · SQL</p></div>
+          <div><span>SPECIALTIES</span><p>Kafka streaming · Lakehouse / Medallion architecture · API integration · XML &amp; JSON processing · PII tokenization · Field-level encryption</p></div>
+          <div><span>CREDENTIALS</span><p>Microsoft Azure Fundamentals (AZ-900) · DP-750 Azure Databricks Solution Expert <small>in progress</small></p></div>
+          <div><span>EDUCATION</span><p>B.Tech / B.E., Biju Patnaik University of Technology (BPUT), 2015</p></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="contact section" id="contact"><p class="section-no">07 / NEXT STEP</p><div class="contact-main"><div><h2>Bring me the<br>hard <em>data problem.</em></h2><p>If your business needs a data platform it can grow on, I’d love to hear what’s getting in the way.</p></div><a class="email" href="mailto:ramakrushna.work@gmail.com">ramakrushna.<br>work@gmail.com <b>↗</b></a></div><div class="contact-foot"><span>Bhubaneswar, India</span><a href="tel:+919776955226">+91 97769 55226</a><a href="https://linkedin.com/in/ramakrushna-dash-de" target="_blank" rel="noopener">LinkedIn ↗</a></div></section>
+    <!-- ============================================================
+         07 / CONTACT
+         ============================================================ -->
+    <section class="contact section" id="contact">
+      <p class="section-no reveal">07 / NEXT STEP</p>
+      <div class="contact-main reveal">
+        <div>
+          <h2>Your next data platform<br>starts with a <em>conversation.</em></h2>
+          <p>If your business needs a data platform it can grow on&mdash;one that's fast, secure, and built to last&mdash;I'd love to hear what's getting in the way.</p>
+        </div>
+        <a class="email" href="mailto:ramakrushna.work@gmail.com">ramakrushna.<br>work@gmail.com <b>↗</b></a>
+      </div>
+      <div class="contact-foot">
+        <span>Bhubaneswar, India</span>
+        <a href="tel:+919776955226">+91 97769 55226</a>
+        <a href="https://linkedin.com/in/ramakrushna-dash-de" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/ramakrushna1994" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </section>
   </main>
-  <footer><span>© 2026 Ramakrushna Dash</span><span>Data systems, made dependable.</span><a href="#top">Back to top ↑</a></footer>
+
+  <footer>
+    <span>© 2026 Ramakrushna Dash</span>
+    <span>Data systems, made dependable.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>
