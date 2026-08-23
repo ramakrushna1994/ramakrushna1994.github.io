@@ -1,0 +1,21 @@
+.theme-toggle{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:transparent;color:var(--ink);padding:7px 9px;font:9px var(--mono);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.theme-toggle i{font:17px/1 var(--serif);font-style:normal;color:var(--orange)}
+.theme-toggle:hover{border-color:var(--orange);color:var(--orange)}
+body.night{--ink:#eff3fb;--blue:#9aaed2;--cream:#192339;--paper:#101725;--orange:#ff815f;--yellow:#ffd15b;--line:#354158;--muted:#a5b0c5;background:var(--paper)}
+body.night .header{background:rgba(16,23,37,.9)}
+body.night .hero-art{background:#17243a}
+body.night .source{background:#17243a;border-color:rgba(255,255,255,.55)}
+body.night .destination{background:rgba(16,23,37,.9)}
+body.night .core{color:#17243a}
+body.night .button.dark{background:#eff3fb;color:#17243a}
+body.night .button.dark:hover{background:var(--orange);color:#17243a}
+body.night .work{background:#17243a}
+body.night .experience-card.featured{background:linear-gradient(90deg,rgba(255,255,255,.08),transparent)}
+body.night .coco-card,body.night footer{background:#17243a}
+body.night .lab h2 em{color:#fffdf8}
+body.night .button.light{background:#fffdf8;color:#17243a}
+body.night .engagement-card{background:#192339}
+body.night .engagement-card .chips span{color:var(--ink);border-color:#43506a}
+body.night .theme-toggle{background:#eff3fb;color:#17243a;border-color:#eff3fb}
+body.night .theme-toggle i{color:var(--orange)}
+@media(max-width:760px){.theme-toggle{padding:7px 10px}.theme-toggle span{display:inline}}
