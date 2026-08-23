@@ -307,6 +307,20 @@ h1, h2, h3, p { margin-top: 0; }
   box-shadow: 0 6px 20px rgba(255,102,61,.25);
 }
 
+.button.outline {
+  background: transparent;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+
+.button.outline:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--paper);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,102,61,.25);
+}
+
 .underlink {
   font: 10px var(--mono);
   letter-spacing: .04em;

@@ -61,6 +61,17 @@ body.night .button.dark:hover {
   color: #17243a;
 }
 
+body.night .button.outline {
+  border-color: #eff3fb;
+  color: #eff3fb;
+}
+
+body.night .button.outline:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #17243a;
+}
+
 body.night .work { background: #17243a; }
 
 body.night .experience-card.featured {
