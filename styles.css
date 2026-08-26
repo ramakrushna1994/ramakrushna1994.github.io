@@ -14,7 +14,7 @@
   --coral: #ff663d;
   --acid: #4ade80;
   --line: #d9d2c4;
-  --muted: #667083;
+  --muted: #596179;
   --mono: 'DM Mono', monospace;
   --sans: 'DM Sans', sans-serif;
   --serif: 'Fraunces', Georgia, serif;
@@ -592,7 +592,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 .principles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 100px;
   border-top: 1px solid var(--line);
 }
@@ -743,6 +743,20 @@ h1, h2, h3, p { margin-top: 0; }
   color: var(--yellow);
   position: absolute;
   left: 0;
+  top: 3px;
+}
+
+.experience-card li strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.experience-card li .mechanism {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.55;
 }
 
 .chips {
@@ -934,7 +948,7 @@ h1, h2, h3, p { margin-top: 0; }
   letter-spacing: -.04em;
   border-bottom: 2px solid var(--orange);
   padding-bottom: 7px;
-  white-space: nowrap;
+  word-break: break-all;
   transition: color .3s, border-color .3s;
 }
 
@@ -1166,6 +1180,23 @@ footer a:hover { color: var(--orange); }
 .contact-link:hover {
   border-color: var(--orange);
   background: rgba(255,102,61,0.04);
+}
+
+.contact-link.no-link {
+  cursor: default;
+}
+
+.contact-link.no-link:hover {
+  border-color: var(--line);
+  background: var(--cream);
+}
+
+.availability {
+  margin-top: 2.5rem;
+  font-size: 0.9em;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.05em;
 }
 
 .cl-icon {

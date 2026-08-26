@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ramakrushna Dash — Senior Data Engineer with ~10 years building enterprise-grade streaming platforms, lakehouse architectures, and PII-compliant data systems on Databricks, Snowflake & AWS.">
+  <meta name="description" content="Ramakrushna Dash — Senior Data Engineer with 10 years building streaming platforms, lakehouse architectures, and PII-safe data systems on Databricks, Snowflake &amp; AWS.">
   <meta name="keywords" content="Data Engineer, Databricks, Snowflake, Kafka, PySpark, AWS Glue, Lakehouse, Streaming, PII Tokenization, ETL, Cloud Data Platform">
   <meta name="author" content="Ramakrushna Dash">
   <meta property="og:title" content="Ramakrushna Dash — Senior Data Engineer">
@@ -13,10 +13,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="engagements.css">
-  <link rel="stylesheet" href="visuals.css">
-  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="canonical" href="https://ramakrushna1994.github.io">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ramakrushna Dash",
+    "jobTitle": "Senior Data Engineer",
+    "url": "https://ramakrushna1994.github.io",
+    "sameAs": [
+      "https://linkedin.com/in/ramakrushna-dash-de",
+      "https://github.com/ramakrushna1994"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Chubb Insurance"
+    },
+    "knowsAbout": ["Data Engineering", "Databricks", "Snowflake", "Kafka", "PySpark", "AWS Glue", "Delta Lake"]
+  }
+  </script>
 </head>
 <body>
   <header class="header" id="top">
@@ -47,7 +63,7 @@
         </div>
       </div>
       <div class="hero-art" aria-label="Dashboard showing real-time telemetry of data pipelines">
-        <div class="art-dashboard">
+        <div class="art-dashboard" aria-hidden="true">
           <div class="telemetry-top">
             <span>PIPELINE HEALTH</span>
             <b><i></i>LIVE</b>
@@ -82,7 +98,7 @@
           </div>
         </div>
         
-        <div class="art-coco">
+        <div class="art-coco" aria-hidden="true">
           <div class="query-header"><span>COCO QUEST · DEMO</span><b>CONNECTED</b></div>
           <div class="result-row">
             <div>
@@ -103,22 +119,22 @@
     <section class="stats" aria-label="Key statistics">
       <div class="stats-grid reveal-group">
         <div class="stat">
-          <span class="stat-number" data-target="10" data-suffix="+">0</span>
+          <span class="stat-number" data-target="10" data-suffix="+">10+</span>
           <span class="stat-label">Years in enterprise data</span>
           <span class="stat-sub">Insurance &amp; Financial Services</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="3" data-suffix="">0</span>
+          <span class="stat-number" data-target="3" data-suffix="">3</span>
           <span class="stat-label">Production streaming pipelines</span>
           <span class="stat-sub">Real-time Kafka → Snowflake</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="50" data-suffix="+">0</span>
+          <span class="stat-number" data-target="50" data-suffix="+">50+</span>
           <span class="stat-label">Legacy workflows migrated</span>
           <span class="stat-sub">15-day parallel validation, zero delta</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="100" data-suffix="%">0</span>
+          <span class="stat-number" data-target="100" data-suffix="%">100%</span>
           <span class="stat-label">PII compliance coverage</span>
           <span class="stat-sub">Enterprise-grade security</span>
         </div>
@@ -174,6 +190,7 @@
         <div><b>01</b><span>Make complexity legible</span><p>Clear layers, clear lineage, clear owners. Medallion architecture that speaks for itself.</p></div>
         <div><b>02</b><span>Design for the cutover</span><p>Validate the old and new worlds in parallel. Earn trust before asking for it.</p></div>
         <div><b>03</b><span>Secure the useful thing</span><p>Protect sensitive data without slowing decisions. Security that enables, not blocks.</p></div>
+        <div><b>04</b><span>Scale the repeatable</span><p>The best migration is the last manual one. I build frameworks and playbooks that turn one-off projects into team capabilities.</p></div>
       </div>
     </section>
 
@@ -235,12 +252,30 @@
             <h3>Senior Data Engineer</h3>
             <p class="outcome">Building a modern streaming platform where real-time event data becomes a secure, governed asset that drives underwriting decisions across the enterprise.</p>
             <ul>
-              <li>Designed a shared hybrid ingestion architecture: on-prem Linux server bridges on-prem Kafka and source systems to ADLS Gen2, enabling secure cloud-side Databricks processing — applied consistently across all 3 production pipelines.</li>
-              <li>Engineered ChubbIO pipeline — ingests Thailand Auto Rating claim events (vehicle &amp; claim JSON payloads) from on-prem Kafka via Linux bridge to ADLS Gen2; processes 2,000 files per 6-hour batch through full medallion architecture (bronze → silver → gold) into Snowflake for UW squad reporting; reconciles files received vs files processed for every batch run.</li>
-              <li>Built DuckCreek policy pipeline — hourly Kafka batch captures policy-sold events containing ASYNC IDs; calls secured DuckCreek API per ID to retrieve full XML policy documents; encrypts on-prem via AES-256 (Azure Key Vault-managed) before ADLS transit; decrypts and processes entirely in Databricks memory with zero PII written to persistent storage; tokenizes PII via Chubb native API backed by an isolated on-prem tokenization server; loads structured data to Snowflake. Dual reconciliation: files received vs processed + ASYNC IDs vs XML documents returned. 10,000+ policies warehoused to date.</li>
-              <li>Delivered SQL Server → Snowflake migration via Databricks — 5M+ rows, 25GB of history data including embedded XML columns requiring custom parsing; AES-256 tokenization applied to all PII fields before load.</li>
-              <li>Implemented Chubb-standard AES-256 encryption (Azure Key Vault) and field-level PII tokenization with architectural isolation — Databricks has zero access to the on-prem tokenization server by design, eliminating cloud-side PII exposure.</li>
-              <li>Managed CI/CD deployment and environment promotion across all pipelines using Databricks Asset Bundles (DAB).</li>
+              <li>
+                <strong>Designed the shared ingestion architecture used across all 3 production pipelines</strong>
+                <span class="mechanism">On-prem Linux server bridges Kafka and source systems to ADLS Gen2, enabling secure cloud-side Databricks processing — applied consistently across every pipeline</span>
+              </li>
+              <li>
+                <strong>Delivered real-time underwriting data to UW squad via 6-hour medallion batches</strong>
+                <span class="mechanism">ChubbIO pipeline: Thailand Auto Rating claim events via on-prem Kafka → Linux bridge → ADLS Gen2 → Databricks medallion (bronze→silver→gold) → Snowflake; 2,000 files per batch with automated reconciliation</span>
+              </li>
+              <li>
+                <strong>Warehoused 10,000+ policies with zero PII written to persistent storage</strong>
+                <span class="mechanism">DuckCreek pipeline: hourly Kafka → API call per ASYNC ID → AES-256 on-prem (Azure Key Vault) → ADLS transit → decrypted in Databricks memory only → PII tokenized → Snowflake; dual reconciliation on files and IDs</span>
+              </li>
+              <li>
+                <strong>Migrated 5M+ rows, 25GB of SQL Server history to Snowflake</strong>
+                <span class="mechanism">Databricks-driven migration with custom XML column parsing and AES-256 PII tokenization applied before load</span>
+              </li>
+              <li>
+                <strong>Implemented enterprise-wide security pattern: cloud-side zero PII exposure</strong>
+                <span class="mechanism">Databricks has zero network access to on-prem tokenization server by design; AES-256 + Azure Key Vault across all pipelines; field-level tokenization on all PII fields</span>
+              </li>
+              <li>
+                <strong>Managed CI/CD deployment and environment promotion across all pipelines</strong>
+                <span class="mechanism">Databricks Asset Bundles (DAB) used for consistent, repeatable releases across dev, staging, and production</span>
+              </li>
             </ul>
             <div class="chips"><span>PySpark</span><span>Kafka</span><span>Databricks</span><span>Snowflake</span><span>Delta Lake</span><span>ADLS Gen2</span><span>CI/CD</span></div>
           </div>
@@ -321,12 +356,12 @@
       <div class="lab-layout reveal">
         <div>
           <p class="eyebrow">Featured build / 2026</p>
-          <h2>Meet Coco<br><em>Quest.</em></h2>
+          <h2>Meet Data<br><em>Forge.</em></h2>
           <p>A Snowflake-native conversational BI assistant built for the moment a business leader has a question but not the SQL to answer it. Ask in plain English, get governed, accurate answers instantly.</p>
           <a class="button light" href="https://github.com/ramakrushna1994/Snowflake-BI-Assistant" target="_blank" rel="noopener">See the project <b>↗</b></a>
         </div>
         <div class="coco-card">
-          <div class="coco-top"><span>COCO QUEST</span><b>● LIVE</b></div>
+          <div class="coco-top"><span>DATAFORGE</span><b>Coco Quest · Snowflake Northstar</b></div>
           <div class="question">"Which region drove our quarterly growth?"</div>
           <div class="answer">
             <span>REVENUE / Q4</span>
@@ -349,7 +384,6 @@
           <div><span>CREDENTIALS</span><p>Microsoft Azure Fundamentals (AZ-900) · DP-750 Azure Databricks Solution Expert <small>in progress</small></p></div>
           <div><span>EDUCATION</span><p>B.Tech / B.E., Biju Patnaik University of Technology (BPUT), 2015</p></div>
         </div>
-      </div>
     </section>
 
     <!-- ============================================================
@@ -362,11 +396,11 @@
           <h2>Your next data platform<br>starts with a <em>conversation.</em></h2>
           <p>If your business needs a data platform it can grow on&mdash;one that's fast, secure, and built to last&mdash;I'd love to hear what's getting in the way.</p>
         </div>
-        <a class="email" href="mailto:ramakrushna.work@gmail.com">ramakrushna.<br>work@gmail.com <b>↗</b></a>
+        <a class="email" href="mailto:ramakrushna.work@gmail.com">ramakrushna.work@gmail.com <b>↗</b></a>
       </div>
       <div class="contact-grid reveal-group">
         <a href="mailto:ramakrushna.work@gmail.com" class="contact-link">
-          <div class="cl-icon">✉</div>
+          <div class="cl-icon" aria-hidden="true">✉</div>
           <div class="cl-info">
             <div class="cl-label">EMAIL</div>
             <div class="cl-val">ramakrushna.work@gmail.com</div>
@@ -374,7 +408,7 @@
           <div class="cl-arrow">↗</div>
         </a>
         <a href="tel:+919776955226" class="contact-link">
-          <div class="cl-icon">📞</div>
+          <div class="cl-icon" aria-hidden="true">📞</div>
           <div class="cl-info">
             <div class="cl-label">PHONE</div>
             <div class="cl-val">+91 97769 55226</div>
@@ -382,7 +416,7 @@
           <div class="cl-arrow">↗</div>
         </a>
         <a href="https://linkedin.com/in/ramakrushna-dash-de" target="_blank" rel="noopener" class="contact-link">
-          <div class="cl-icon">in</div>
+          <div class="cl-icon" aria-hidden="true">in</div>
           <div class="cl-info">
             <div class="cl-label">LINKEDIN</div>
             <div class="cl-val">linkedin.com/in/ramakrushna-dash-de</div>
@@ -390,22 +424,22 @@
           <div class="cl-arrow">↗</div>
         </a>
         <a href="https://github.com/ramakrushna1994" target="_blank" rel="noopener" class="contact-link">
-          <div class="cl-icon">⌥</div>
+          <div class="cl-icon" aria-hidden="true">⌥</div>
           <div class="cl-info">
             <div class="cl-label">GITHUB</div>
             <div class="cl-val">github.com/ramakrushna1994</div>
           </div>
           <div class="cl-arrow">↗</div>
         </a>
-        <a href="#" class="contact-link">
-          <div class="cl-icon">📍</div>
+        <div class="contact-link no-link">
+          <div class="cl-icon" aria-hidden="true">📍</div>
           <div class="cl-info">
             <div class="cl-label">LOCATION</div>
             <div class="cl-val">Bhubaneswar, India</div>
           </div>
-          <div class="cl-arrow">↗</div>
-        </a>
+        </div>
       </div>
+      <p class="availability">Open to Senior &amp; Staff Data Engineering roles &mdash; remote or hybrid.</p>
     </section>
   </main>
 
@@ -417,6 +451,6 @@
 
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
